@@ -6,8 +6,8 @@ import pandas as pd
 
 def extract_info(url):
 	"""
-    qiita記事のURLをスクレイピングし、いいね数やストック数等の情報を抽出する。
-    """
+	qiita記事のURLをスクレイピングし、いいね数やストック数等の情報を抽出する。
+	"""
 	if re.search('https\://qiita\.com',url):
 		res = requests.get(url)
 		soup = BeautifulSoup(res.content, 'html.parser')
